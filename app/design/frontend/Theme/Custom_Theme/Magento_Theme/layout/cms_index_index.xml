@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+     <body>
+        <!-- Main content -->
+        <referenceContainer name="content" htmlTag="div" htmlClass="container">
+            <!-- hero banner -->
+            <container name="hero-banner" as="hero-banner" before="-"  htmlTag="div" htmlClass="hero-banner">
+                    <block class="Magento\Framework\View\Element\Template" name="custom.slider" template="Magento_Theme::html/home/herobanner.phtml" /> 
+            </container>
+            <!-- end hero banner -->
+
+            <!-- Top categories -->
+            <container name="top-category" as="top-category" after="hero-banner"  htmlTag="div" htmlClass="top-category">
+                    <block class="Magento\Framework\View\Element\Template" name="main.title.cate" template="Magento_Theme::html/maintitle.phtml">
+                         <arguments>
+                            <argument name="custom_text" xsi:type="string">Top Categories of the Month</argument>
+                        </arguments>
+                    </block>
+
+                    <block class="Magento\Framework\View\Element\Template" name="main.top.category" template="Magento_Theme::html/home/topcategories.phtml"/>
+            </container>
+            <!-- end top categories -->
+
+            <!-- deals -->
+             <container name="deals" as="deals" after="top-category"  htmlTag="div" htmlClass="deals">
+                    <block class="Magento\Framework\View\Element\Template" name="main.title.deals" template="Magento_Theme::html/maintitle.phtml">
+                         <arguments>
+                            <argument name="custom_text" xsi:type="string">Deal of The Day</argument>
+                        </arguments>
+                    </block>
+
+                    <block class="Magento\Framework\View\Element\Template" name="main.deals" template="Magento_Theme::html/home/slideproduct.phtml"/>
+            </container>
+            <!--end  deal -->
+
+            <!-- promotion banner -->
+             <container name="promotion-banner" as="promotion-banner" after="main.deals"  htmlTag="div" htmlClass="promotion-banner">
+                    <block class="Magento\Framework\View\Element\Template" name="main.promotion.banner" template="Magento_Theme::html/home/promotionbanner.phtml"/>
+            </container>
+            <!--end  promotion banner -->
+
+            <!--product seller -->
+             <container name="best-seller" after="promotion-banner"  htmlTag="div" htmlClass="best-seller">
+                    <block class="Magento\Framework\View\Element\Template" name="main.title.best-seller" template="Magento_Theme::html/maintitle.phtml">
+                         <arguments>
+                            <argument name="custom_text" xsi:type="string">Best Seller</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Framework\View\Element\Template" name="main.best-seller" template="Magento_Theme::html/home/slideproduct.phtml"/>
+            </container>
+            <!--end product seller-->
+
+            <!-- sup banner -->
+             <container name="sup-banner" as="sup-banner" after="main.deals"  htmlTag="div" htmlClass="sup-banner">
+                    <block class="Magento\Framework\View\Element\Template" name="main.sup.banner" template="Magento_Theme::html/home/supbanner.phtml"/>
+            </container>
+            <!--end  sup banner -->
+
+            <!--product seller -->
+             <container name="seller" as="seller" after="sup-banner"  htmlTag="div" htmlClass="seller">
+                    <!-- 1 -->
+                    <block class="Magento\Framework\View\Element\Template" name="main.title.seller-1" template="Magento_Theme::html/maintitle.phtml">
+                         <arguments>
+                            <argument name="custom_text" xsi:type="string">Cirtus Juicer</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Framework\View\Element\Template" name="main.seller-1" template="Magento_Theme::html/home/slideproduct.phtml"/>
+                    <!-- end 1 -->
+
+                    <!-- 2 -->
+                    <block class="Magento\Framework\View\Element\Template" name="main.title.seller-2" template="Magento_Theme::html/maintitle.phtml">
+                         <arguments>
+                            <argument name="custom_text" xsi:type="string">Blender</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Framework\View\Element\Template" name="main.seller-2" template="Magento_Theme::html/home/slideproduct.phtml"/>
+                    <!-- end 2 -->
+
+                    <!-- 3 -->
+                    <block class="Magento\Framework\View\Element\Template" name="main.title.seller-3" template="Magento_Theme::html/maintitle.phtml">
+                         <arguments>
+                            <argument name="custom_text" xsi:type="string">Electric Oven</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Framework\View\Element\Template" name="main.seller-3" template="Magento_Theme::html/home/slideproduct.phtml"/>
+                    <!-- end 3 -->
+
+                    <!-- 4 -->
+                    <block class="Magento\Framework\View\Element\Template" name="main.title.seller-4" template="Magento_Theme::html/maintitle.phtml">
+                         <arguments>
+                            <argument name="custom_text" xsi:type="string">Air Purifier</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Framework\View\Element\Template" name="main.seller-4" template="Magento_Theme::html/home/slideproduct.phtml"/>
+                    <!-- end 4 -->
+
+                    <!-- 5 -->
+                    <block class="Magento\Framework\View\Element\Template" name="main.title.seller-5" template="Magento_Theme::html/maintitle.phtml">
+                         <arguments>
+                            <argument name="custom_text" xsi:type="string">Air Conditioner</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Framework\View\Element\Template" name="main.seller-5" template="Magento_Theme::html/home/slideproduct.phtml"/>
+                    <!-- end 5 -->
+
+                    <!-- 6 -->
+                    <block class="Magento\Framework\View\Element\Template" name="main.title.seller-6" template="Magento_Theme::html/maintitle.phtml">
+                         <arguments>
+                            <argument name="custom_text" xsi:type="string">Refrigerator</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Framework\View\Element\Template" name="main.seller-6" template="Magento_Theme::html/home/slideproduct.phtml"/>
+                    <!-- end 6 -->
+            </container>
+            <!--end product seller-->
+
+            <!-- news tab -->
+            <container name="news" htmlTag="div" htmlClass="news">
+                <block class="Magento\Framework\View\Element\Template" name="main.news.tab" template="Magento_Theme::html/home/newstab.phtml">
+                    <arguments>
+                        <argument name="block_template" xsi:type="string">Magento_Theme::html/home/slideproduct.phtml</argument>
+                    </arguments>
+                </block>
+            </container>
+            <!-- end news tab -->
+
+            <!--recently -->
+             <container name="recently" after="news"  htmlTag="div" htmlClass="recently">
+                    <block class="Magento\Framework\View\Element\Template" name="main.title.recently" template="Magento_Theme::html/maintitle.phtml">
+                         <arguments>
+                            <argument name="custom_text" xsi:type="string">Your Recently Viewd Products</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Framework\View\Element\Template" name="main.recently" template="Magento_Theme::html/home/slideproduct.phtml"/>
+            </container>
+            <!--end recently-->
+            
+        </referenceContainer>
+        <!-- End main content -->
+    </body>
+</page>

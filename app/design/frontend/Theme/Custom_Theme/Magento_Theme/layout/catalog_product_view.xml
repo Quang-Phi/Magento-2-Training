@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+     <body>
+        <referenceContainer name="product.info.social" remove ="true"/>
+        
+     <referenceContainer name="content" >
+        <!-- handle title -->
+        <referenceContainer name="page.main.title">
+               <container name="sup.page.title" htmlTag="div" htmlClass="sup-page-title" >
+               </container>
+        </referenceContainer>
+        <!-- end title -->
+
+        <!-- main info -->
+        <referenceContainer name="product.info.main">
+            <block class="Magento\Framework\View\Element\Template" name="product.info.main.detail.text"  template="Magento_Theme::html/details/details.phtml" after="product.info.price"/>
+        </referenceContainer>
+        <!-- end main info -->
+
+        <!--recently -->
+        <container name="slide.product"  htmlTag="div" htmlClass="slide product">
+            <container name="recently" after="catalog.product.related"  htmlTag="div" htmlClass="recently">
+                    <block class="Magento\Framework\View\Element\Template" name="main.title.recently" template="Magento_Theme::html/maintitle.phtml">
+                        <arguments>
+                            <argument name="custom_text" xsi:type="string">Your Recently Viewd Products</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Framework\View\Element\Template" name="main.recently" template="Magento_Theme::html/home/slideproduct.phtml"/>
+            </container>
+        </container>
+        <!--end recently-->
+     </referenceContainer>
+
+      
+     </body>
+     <move element="product.info.review" destination="sup.page.title" />
+     <move element="product.info.stock.sku" destination="sup.page.title" />
+     <move element="product.info.type" destination="product.info.main" after="product.info.price" />
+     <move element="catalog.product.related" destination="slide.product" before="recently"/>
+</page>

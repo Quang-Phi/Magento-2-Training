@@ -1,0 +1,20 @@
+<?php
+$columnsLimit = $block->getColumnsLimit() ?: 0;
+$_menuHtml = $block->getHtml('level-top', 'submenu', $columnsLimit)
+?>
+
+<nav class="navigation" data-action="navigation">
+   <div class="container">
+   <ul data-mage-init='{"menu":{"responsive":true, "expanded":true, "position":{"my":"left top","at":"left bottom"}}}'>
+        <?= /* @noEscape */ $_menuHtml?>
+        <?= $block->getChildHtml() ?>
+    </ul>
+   </div>
+</nav>
+<style>
+    .navigation,
+    .navigation *{
+        background-color: #ba418a;
+        color: #fff ;
+    }
+</style>
