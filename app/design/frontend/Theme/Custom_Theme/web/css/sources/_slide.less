@@ -1,0 +1,167 @@
+.product-slick-slider{
+    .slick-arrow{
+        &.slick-prev{
+            left: -6rem;
+        }
+        &.slick-next{
+            right: -6rem;
+        }
+    }
+    .slick-track{
+        // margin: 0 -2rem;
+        .slick-slide{
+            padding: 0 2rem;
+            .item{
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: .6rem;
+                flex-shrink: 0;
+                .product-content{
+                    .product-name{
+                        p{
+                            font-size: 1.4rem;
+                            font-weight: 600;
+                            line-height: 2rem;
+                            color: #93117B;
+                            letter-spacing: .07rem;
+                        }
+                    }
+                    .product-rate{
+                        position: relative;
+                        height: 2.8rem;
+                        left: -.8rem;
+                        &::before{
+                            left: 0;
+                            position: absolute;
+                            top: 0;
+                            width: 100%;
+                            z-index: 1;
+                            -webkit-font-smoothing: antialiased;
+                            color: #eab223;
+                            font-family: 'icons-blank-theme';
+                            font-size: 2.6rem;
+                            height: 2.8rem;
+                            letter-spacing: -1rem;
+                            line-height: 2rem;
+                            content: '\e605' '\e605' '\e605' '\e605' '\e605';
+                            display: block;
+                            font-style: normal;
+                            font-weight: normal;
+                        }
+                        &::after{
+                            position: absolute;
+                            top: 0; 
+                            content:'999';
+                            z-index: 1;
+                            -webkit-font-smoothing: antialiased;
+                            color: #c7c7c7;
+                            left: 10rem;
+                            font-size: 1.4rem;
+                            height: 1.8rem;
+                        }
+                    }
+                    .pricing{
+                        display: flex;
+                        flex-direction: column-reverse;
+                        align-items: flex-start;
+                        gap: .4rem;
+                        align-self: stretch;
+                        .old-price{
+                            font-size: 1.4rem;
+                            font-weight: 500;
+                            line-height: 2rem; 
+                            letter-spacing: .07rem;
+                        }
+                        .selling{
+                            display:none;
+                            .name,.date{
+                                display: flex;
+                                align-items: center;
+                                gap: .4rem;
+                                align-self: stretch;
+                                span{
+                                    font-size: 1.4rem;
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    line-height: 2rem; 
+                                    letter-spacing: .07rem;
+                                }
+                            }
+                        }
+                        .new-price{
+                            display: flex;
+                            align-items: center;
+                            gap: 1rem;
+                            align-self: stretch;
+                            .price,
+                            .price span{
+                                font-size: 1.8rem;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: 2.4rem; 
+                                letter-spacing: .09rem;
+                            }
+                            .discount{
+                                display: flex;
+                                padding: .2rem .4rem;
+                                align-items: flex-start;
+                                gap: 1.6rem;
+                                background: #f2351b;
+                                border-radius: .2rem;
+                                display: none;
+                                span{
+                                    font-size: 1.6rem;
+                                    font-style: normal;
+                                    font-weight: 700;
+                                    line-height: 2rem;
+                                    letter-spacing: .08rem;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.full{
+        .slick-track{
+            .slick-slide{
+                .item{
+                    .product-content{
+                        .pricing{
+                            flex-direction: column;
+                            .selling{
+                                display:block;
+                            }
+                            .new-price{
+                                .discount{
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.hidden{
+        .slick-track{
+            margin:0 -1.2rem;
+            .slick-slide{
+                padding: 0 1.2rem;
+                .item{
+                    .product-content{
+                       display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.slick-arrow{
+    background-color: transparent !important;
+}

@@ -1,24 +1,35 @@
-<?php
-$blockTemplate = $block->getData('block_template');
-?>
-<div style="background-color: #fad2f2" class="custom-tab">
-    <div class="tabsnav-wrap d-flex justify-content-between">
-    <h3>NEWs</h3>
-    <ul class="nav nav-tabs d-flex justify-content-end">
-        <li class="active"><a data-toggle="tab" href="#tab1">Review Product</a></li>
-        <li><a data-toggle="tab" href="#tab2">Tips & Tricks</a></li>
-        <li><a data-toggle="tab" href="#tab3">Promotions</a></li>
-        <li><a data-toggle="tab" href="#tab4">View All</a></li>
-    </ul>
-    </div>
+<div class="custom-tab">
+    <div class="tabsnav-wrap d-flex">
+        <h3>NEWs</h3>
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#tab1">Review Product</a></li>
+            <li><a data-toggle="tab" href="#tab2">Tips & Tricks</a></li>
+            <li><a data-toggle="tab" href="#tab3">Promotions</a></li>
+            <li><a data-toggle="tab" href="#tab4">View All</a></li>
+        </ul>
+        </div>
     <div class="tab-content">
-        <div id="tab1" class="tab-pane in active show">
-             <?php if ($blockTemplate && $block->getNameInLayout() === 'main.news.tab'): ?>
-                <?= $this->getLayout()->createBlock('Magento\Framework\View\Element\Template')
-                    ->setTemplate($blockTemplate)
-                    ->toHtml();
-                ?>
-            <?php endif; ?>
+        <div id="tab1" class="tab-pane in active">
+            <a href="#" class="block">
+                <img src="<?= $block -> getViewFileUrl("images/Rectangle 2315.png")?>" alt="">
+                <p class="text">How To Make A Fresh Juice Blended For Your Family</p>
+                <span>Organic</span>
+            </a href="#">
+            <a href="#" class="block">
+                <img src="<?= $block -> getViewFileUrl("images/Rectangle 2316.png")?>" alt="">
+                <p class="text">How To Make A Fresh Juice Blended For Your Family</p>
+                <span>Organic</span>
+            </a href="#">
+            <a href="#" class="block">
+                <img src="<?= $block -> getViewFileUrl("images/Rectangle 2317.png")?>" alt="">
+                <p class="text">How To Make A Fresh Juice Blended For Your Family</p>
+                <span>Organic</span>
+            </a href="#">
+            <a href="#" class="block">
+                <img src="<?= $block -> getViewFileUrl("images/Rectangle 2318.png")?>" alt="">
+                <p class="text">How To Make A Fresh Juice Blended For Your Family</p>
+                <span>Organic</span>
+            </a href="#">
         </div>
         <div id="tab2" class="tab-pane">
             <h1>tab2 act</h1>
@@ -31,17 +42,3 @@ $blockTemplate = $block->getData('block_template');
         </div>
     </div>
 </div>
-
-<style>
-    .tabsnav-wrap{
-        border-bottom: 1px solid #fff;
-    }
-    .nav-tabs li{
-        padding: 8px 12px;
-    }
-
-    .nav-tabs li.active a{
-        font-weight: 500;
-        color: black;
-    }
-</style>

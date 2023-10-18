@@ -1,8 +1,11 @@
 <?php
 $customText = $block->getData('custom_text');
+$customLine = $block->getData('custom_line');
 if ($customText) {
 ?>
-    <div class='main-title mt-5'><?= $customText ?></div>
+    <div class='main-title mt-5'><?= $customText ?>
+        <span class='line-through <?= $customLine?$customLine:'' ?>'></span>
+    </div>
     <?php
 }
 ?>

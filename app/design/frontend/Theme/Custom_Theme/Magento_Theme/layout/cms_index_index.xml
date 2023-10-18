@@ -1,5 +1,8 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+     <head> 
+        <css src="css/homepage.css" />
+     </head>
      <body>
         <!-- Main content -->
         <referenceContainer name="content" htmlTag="div" htmlClass="container">
@@ -14,6 +17,7 @@
                     <block class="Magento\Framework\View\Element\Template" name="main.title.cate" template="Magento_Theme::html/maintitle.phtml">
                          <arguments>
                             <argument name="custom_text" xsi:type="string">Top Categories of the Month</argument>
+                            <argument name="custom_line" xsi:type="string">hide</argument>
                         </arguments>
                     </block>
 
@@ -29,7 +33,11 @@
                         </arguments>
                     </block>
 
-                    <block class="Magento\Framework\View\Element\Template" name="main.deals" template="Magento_Theme::html/home/slideproduct.phtml"/>
+                    <block class="Magento\Framework\View\Element\Template" name="main.deals" template="Magento_Theme::html/home/slideproduct.phtml">
+                        <arguments>
+                            <argument name="custom_text" xsi:type="string">full</argument>
+                        </arguments>
+                    </block>
             </container>
             <!--end  deal -->
 
@@ -116,11 +124,7 @@
 
             <!-- news tab -->
             <container name="news" htmlTag="div" htmlClass="news">
-                <block class="Magento\Framework\View\Element\Template" name="main.news.tab" template="Magento_Theme::html/home/newstab.phtml">
-                    <arguments>
-                        <argument name="block_template" xsi:type="string">Magento_Theme::html/home/slideproduct.phtml</argument>
-                    </arguments>
-                </block>
+                <block class="Magento\Framework\View\Element\Template" name="main.news.tab" template="Magento_Theme::html/home/newstab.phtml"/>
             </container>
             <!-- end news tab -->
 
@@ -131,7 +135,12 @@
                             <argument name="custom_text" xsi:type="string">Your Recently Viewd Products</argument>
                         </arguments>
                     </block>
-                    <block class="Magento\Framework\View\Element\Template" name="main.recently" template="Magento_Theme::html/home/slideproduct.phtml"/>
+                    <block class="Magento\Framework\View\Element\Template" name="main.recently" template="Magento_Theme::html/home/slideproduct.phtml">
+                         <arguments>
+                            <argument name="custom_text" xsi:type="string">hidden</argument>
+                            <argument name="custom_line" xsi:type="string">hide</argument>
+                        </arguments>
+                    </block>
             </container>
             <!--end recently-->
             

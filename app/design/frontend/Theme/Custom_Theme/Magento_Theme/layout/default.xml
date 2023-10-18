@@ -10,70 +10,87 @@
 
 
         <!-- header-->
-        <referenceContainer name="header-wrapper">
-            <container name="header-main-content"  htmlTag="div" htmlClass="header-main-content">
-                <block class="Magento\Theme\Block\Html\Header\Logo" name="logo">
-                    <arguments>
-                        <argument name="logoPathResolver" xsi:type="object">Magento\Theme\ViewModel\Block\Html\Header\LogoPathResolver</argument>
-                        <argument name="logo_size_resolver" xsi:type="object">Magento\Theme\ViewModel\Block\Html\Header\LogoSizeResolver</argument>
-                    </arguments>
-                </block>
+        <referenceContainer name="header-wrapper" >
+            <container htmlTag="div" htmlClass="container">
+                <block class="Magento\Framework\View\Element\Template" name="header.language" template="Magento_Theme::html/header/language.phtml" />
+                <container name="header-main-content"  htmlTag="div" htmlClass="header-main-content" after="header.language">
+                    <block class="Magento\Theme\Block\Html\Header\Logo" name="logo">
+                        <arguments>
+                            <argument name="logoPathResolver" xsi:type="object">Magento\Theme\ViewModel\Block\Html\Header\LogoPathResolver</argument>
+                            <argument name="logo_size_resolver" xsi:type="object">Magento\Theme\ViewModel\Block\Html\Header\LogoSizeResolver</argument>
+                        </arguments>
+                    </block>
 
-                <block class="Magento\Framework\View\Element\Template" name="top.search" as="topSearch" template="Magento_Theme::html/header/search.phtml">
-                    <arguments>
-                        <argument name="configProvider" xsi:type="object">Magento\Search\ViewModel\ConfigProvider</argument>
-                        <argument name="additionalSearchFormData" xsi:type="object">Magento\Search\ViewModel\AdditionalSearchFormData</argument>
-                    </arguments>
-                </block>
+                    <block class="Magento\Framework\View\Element\Template" name="top.search" as="topSearch" template="Magento_Theme::html/header/search.phtml">
+                        <arguments>
+                            <argument name="configProvider" xsi:type="object">Magento\Search\ViewModel\ConfigProvider</argument>
+                            <argument name="additionalSearchFormData" xsi:type="object">Magento\Search\ViewModel\AdditionalSearchFormData</argument>
+                        </arguments>
+                    </block>
 
-                <block class="Magento\Checkout\Block\Cart\Sidebar" name="minicart" as="minicart" after="top.search" template="Magento_Theme::html/header/minicart.phtml">
-                    <arguments>
-                        <argument name="jsLayout" xsi:type="array">
-                            <item name="types" xsi:type="array"/>
-                            <item name="components" xsi:type="array">
-                                <item name="minicart_content" xsi:type="array">
-                                    <item name="component" xsi:type="string">Magento_Checkout/js/view/minicart</item>
-                                    <item name="config" xsi:type="array">
-                                        <item name="template" xsi:type="string">Magento_Checkout/minicart/content</item>
-                                    </item>
-                                    <item name="children" xsi:type="array">
-                                        <item name="subtotal.container" xsi:type="array">
-                                            <item name="component" xsi:type="string">uiComponent</item>
-                                            <item name="config" xsi:type="array">
-                                                <item name="displayArea" xsi:type="string">subtotalContainer</item>
-                                            </item>
-                                            <item name="children" xsi:type="array">
-                                                <item name="subtotal" xsi:type="array">
-                                                    <item name="component" xsi:type="string">uiComponent</item>
-                                                    <item name="config" xsi:type="array">
-                                                        <item name="template" xsi:type="string">Magento_Checkout/minicart/subtotal</item>
+                    <block class="Magento\Checkout\Block\Cart\Sidebar" name="minicart" as="minicart" after="top.search" template="Magento_Theme::html/header/minicart.phtml">
+                        <arguments>
+                            <argument name="jsLayout" xsi:type="array">
+                                <item name="types" xsi:type="array"/>
+                                <item name="components" xsi:type="array">
+                                    <item name="minicart_content" xsi:type="array">
+                                        <item name="component" xsi:type="string">Magento_Checkout/js/view/minicart</item>
+                                        <item name="config" xsi:type="array">
+                                            <item name="template" xsi:type="string">Magento_Checkout/minicart/content</item>
+                                        </item>
+                                        <item name="children" xsi:type="array">
+                                            <item name="subtotal.container" xsi:type="array">
+                                                <item name="component" xsi:type="string">uiComponent</item>
+                                                <item name="config" xsi:type="array">
+                                                    <item name="displayArea" xsi:type="string">subtotalContainer</item>
+                                                </item>
+                                                <item name="children" xsi:type="array">
+                                                    <item name="subtotal" xsi:type="array">
+                                                        <item name="component" xsi:type="string">uiComponent</item>
+                                                        <item name="config" xsi:type="array">
+                                                            <item name="template" xsi:type="string">Magento_Checkout/minicart/subtotal</item>
+                                                        </item>
                                                     </item>
                                                 </item>
                                             </item>
-                                        </item>
-                                        <item name="extra_info" xsi:type="array">
-                                            <item name="component" xsi:type="string">uiComponent</item>
-                                            <item name="config" xsi:type="array">
-                                                <item name="displayArea" xsi:type="string">extraInfo</item>
+                                            <item name="extra_info" xsi:type="array">
+                                                <item name="component" xsi:type="string">uiComponent</item>
+                                                <item name="config" xsi:type="array">
+                                                    <item name="displayArea" xsi:type="string">extraInfo</item>
+                                                </item>
                                             </item>
-                                        </item>
-                                        <item name="promotion" xsi:type="array">
-                                            <item name="component" xsi:type="string">uiComponent</item>
-                                            <item name="config" xsi:type="array">
-                                                <item name="displayArea" xsi:type="string">promotion</item>
+                                            <item name="promotion" xsi:type="array">
+                                                <item name="component" xsi:type="string">uiComponent</item>
+                                                <item name="config" xsi:type="array">
+                                                    <item name="displayArea" xsi:type="string">promotion</item>
+                                                </item>
                                             </item>
                                         </item>
                                     </item>
                                 </item>
-                            </item>
-                        </argument>
-                    </arguments>
-                    <container name="minicart.addons" label="Mini-cart promotion block"/>
-                </block>
+                            </argument>
+                        </arguments>
+                        <container name="minicart.addons" label="Mini-cart promotion block"/>
+                    </block>
 
-                <container name="user-action"  htmlTag="div" htmlClass="user-action" before="header-main-content">
-                    <container name="user-authen"  htmlTag="div" htmlClass="user-authen" before="-"/>
-                    <container name="user-cart"  htmlTag="div" htmlClass="user-cart" after="user-authen"/>
+                    <container name="user.action"  htmlTag="div" htmlClass="user-action" before="header-main-content">
+                        <container name="user.wishlist" htmlTag="div"  htmlClass="user-wishlist">
+                            <block class="Magento\Framework\View\Element\Template" template="Magento_Theme::html/header/wishlist.phtml" />
+                        </container>
+                        
+                        <container name="user.authen"  htmlTag="div" htmlClass="user-authen" after="-">
+                            <block class="Magento\Framework\View\Element\Template" name="user.icon" template="Magento_Theme::html/header/usericon.phtml" />
+                            <container name="authen.links"  htmlTag="ul" htmlClass="user-links">
+                                <referenceBlock name="register-link">
+                                    <arguments>
+                                        <argument name="label" xsi:type="string" translate="true">Register</argument>
+                                    </arguments>
+                                </referenceBlock>
+                            </container>
+                        </container>
+
+                        <container name="user-cart"  htmlTag="div" htmlClass="user-cart" />
+                    </container>
                 </container>
             </container>
 
@@ -86,12 +103,12 @@
 
         </referenceContainer>
 
-        <referenceContainer name="header.panel" >
+        <referenceContainer name="header.panel" htmlTag="div" htmlClass="container">
             <block class="Magento\Framework\View\Element\Template" name="top.banner" template="Magento_Theme::html/home/topbanner.phtml"/>
         </referenceContainer>
 
-        <move element="register-link" destination="user-authen" />
-        <move element="authorization-link" destination="user-authen" />
+        <move element="register-link" destination="authen.links" />
+        <move element="authorization-link" destination="authen.links" before="register-link"/>
         <move element="minicart" destination="user-cart" />
         <move element="store.menu" destination="header-wrapper" />
         <!-- end Header -->
@@ -102,7 +119,7 @@
             <container name="footer" as="footer" label="Page Footer" htmlTag="div" htmlClass="footer content">
                 <block class="Magento\Framework\View\Element\Template" name="main-footer" template="Magento_Theme::html/footer/mainfooter.phtml" />
                
-                <container name="end-footer"  htmlTag="div"  htmlClass="d-flex justify-content-between" >
+                <container name="end-footer"  htmlTag="div"  htmlClass="end-footer" >
                     <block class="Magento\Theme\Block\Html\Footer" name="copyright" template="Magento_Theme::html/footer/copyright.phtml"/>
                     <block class="Magento\Framework\View\Element\Template" name="report.bugs" template="Magento_Theme::html/footer/bugreport.phtml"/>
                 </container>

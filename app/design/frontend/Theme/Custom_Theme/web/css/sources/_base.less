@@ -1,0 +1,88 @@
+@primary-color: #93117b;
+@success-color: #4caf50;
+@warning-color: #ff9800;
+@error-color: #f44336;
+@info-color: #2196f3;
+@font-size-base: 1.6rem;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+}
+
+html {
+    font-size: 62.5% !important;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: @font-size-base;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #000;
+    overflow-x: hidden;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+
+li{
+     list-style: none !important;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+ img{
+    display: inline-block;
+ }
+
+ .navigation, 
+ .breadcrumbs, 
+ .page-header .header.panel, 
+ .header.content, 
+ .footer.content, 
+ .page-wrapper > .widget, 
+ .page-wrapper > .page-bottom, 
+ .block.category.event, 
+ .top-container, 
+ .page-main {
+    max-width: unset !important;
+    padding-left: unset !important;
+    padding-right: unset !important;
+ }
+
+ h1,h2,h3,h4,h5,p,textarea{
+    margin: 0;
+ }
+
+ .main-title{
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 3.2rem;
+    margin-bottom: 4rem;
+    .line-through{
+        height: .1rem;
+        background: #EDEDED;
+        margin-top: 1.4rem;
+        &.hide{
+            display: none;
+        }
+    }
+ }
+
+
