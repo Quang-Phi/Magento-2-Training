@@ -1,40 +1,92 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+     <head> 
+        <css src="css/detailspage.css" />
+     </head>
      <body>
         <referenceContainer name="product.info.social" remove ="true"/>
+        <referenceContainer name="product.info.configurable.catalog_inventory_stockqty_default" remove = "true"/>
+        <referenceContainer name="product.info.upsell" remove = "true"/>
+        <referenceContainer name="catalog.product.related" remove = "true"/>
         
-     <referenceContainer name="content" >
-        <!-- handle title -->
-        <referenceContainer name="page.main.title">
-               <container name="sup.page.title" htmlTag="div" htmlClass="sup-page-title" >
-               </container>
-        </referenceContainer>
-        <!-- end title -->
+        <referenceContainer name="content" htmlTag="div" htmlClass="container" >
+            <!-- handle title -->
+            <referenceContainer name="page.main.title">
+                <container name="sup.page.title" htmlTag="div" htmlClass="sup-page-title" >
+                </container>
+            </referenceContainer>
+            <!-- end title -->
 
-        <!-- main info -->
-        <referenceContainer name="product.info.main">
-            <block class="Magento\Framework\View\Element\Template" name="product.info.main.detail.text"  template="Magento_Theme::html/details/details.phtml" after="product.info.price"/>
-        </referenceContainer>
-        <!-- end main info -->
+            <!-- main info -->
+            <container name="product.main.details"  htmlTag="div" htmlClass="product-details" before="product.info.details"/>
+            <referenceContainer name="product.info.main">
+                <container name="product.info.main.wrap"  htmlTag="div" htmlClass="info-main-wrapper" before="-">
+                    <container name="price.group" htmlTag="div" htmlClass="price-group">
+                        <block class="Magento\Framework\View\Element\Template" name="product.info.main.detail.price"  template="Magento_Theme::html/details/pricegroup.phtml" />
+                        
+                        <container name="current.price" htmlTag="div" htmlClass="current-price">
+                            <block class="Magento\Framework\View\Element\Template" template="Magento_Theme::html/details/sellpercent.phtml" />
+                        </container>
 
-        <!--recently -->
-        <container name="slide.product"  htmlTag="div" htmlClass="slide product">
-            <container name="recently" after="catalog.product.related"  htmlTag="div" htmlClass="recently">
-                    <block class="Magento\Framework\View\Element\Template" name="main.title.recently" template="Magento_Theme::html/maintitle.phtml">
-                        <arguments>
+                        <block class="Magento\Framework\View\Element\Template" name="price.sell.text" template="Magento_Theme::html/details/selltext.phtml">
+                            <arguments>
+                                <argument name="text" xsi:type="string">Price is discounted on the Shopping Cart/Checkout Page</argument>
+                            </arguments>
+                        </block>
+
+                    </container>
+                    <block class="Magento\Framework\View\Element\Template" name="product.info.main.detail.text"  template="Magento_Theme::html/details/details.phtml" after="price-group"/>
+                </container>
+                <block class="Magento\Framework\View\Element\Template" name="product.info.tags"  template="Magento_Theme::html/details/tags.phtml" after="-"/>
+            </referenceContainer>
+
+            <referenceContainer name="product.info.options.wrapper.bottom">
+                <block class="Magento\Framework\View\Element\Template" template="Magento_Theme::html/header/wishlist.phtml" after="-">
+                     <arguments>
+                            <argument name="color" xsi:type="string">#282828</argument>
+                    </arguments>
+                </block>
+            </referenceContainer>
+            <!-- end main info -->
+            
+            <!--recently -->
+            <container name="slide.product"  htmlTag="div" htmlClass="slide product">
+                <container name="related" after="catalog.product.related"  htmlTag="div" htmlClass="related">
+                        <block class="Magento\Framework\View\Element\Template" name="main.title.related" template="Magento_Theme::html/maintitle.phtml">
+                            <arguments>
+                                <argument name="custom_text" xsi:type="string">Related Product</argument>
+                                <argument name="custom_line" xsi:type="string">hide</argument>
+                            </arguments>
+                        </block>
+                        <block class="Magento\Framework\View\Element\Template" name="main.related" template="Magento_Theme::html/home/slideproduct.phtml"/>
+                </container>
+                 <!--recently -->
+                <container name="recently" htmlTag="div" htmlClass="recently">
+                    <block class="Magento\Framework\View\Element\Template" name="catalog.title.recently" template="Magento_Theme::html/maintitle.phtml">
+                         <arguments>
                             <argument name="custom_text" xsi:type="string">Your Recently Viewd Products</argument>
                         </arguments>
                     </block>
-                    <block class="Magento\Framework\View\Element\Template" name="main.recently" template="Magento_Theme::html/home/slideproduct.phtml"/>
+                    <block class="Magento\Framework\View\Element\Template" name="catalog.product.recently" template="Magento_Theme::html/home/slideproduct.phtml">
+                         <arguments>
+                            <argument name="custom_text" xsi:type="string">hidden</argument>
+                            <argument name="custom_line" xsi:type="string">hide</argument>
+                        </arguments>
+                    </block>
+                </container>
+                <!--end recently-->
             </container>
-        </container>
-        <!--end recently-->
-     </referenceContainer>
+            <!--end recently-->
+        </referenceContainer>
 
-      
-     </body>
-     <move element="product.info.review" destination="sup.page.title" />
-     <move element="product.info.stock.sku" destination="sup.page.title" />
-     <move element="product.info.type" destination="product.info.main" after="product.info.price" />
-     <move element="catalog.product.related" destination="slide.product" before="recently"/>
+        
+        </body>
+        <move element="page.main.title" destination="content" before="-"/>
+        <move element="product.info.main" destination="product.main.details" />
+        <move element="product.info.media" destination="product.main.details" after="product.info.main"/>
+        <move element="product.info.review" destination="sup.page.title" />
+        <move element="product.info.price" destination="current.price"/>
+        <move element="product.info.stock.sku" destination="sup.page.title" />
+        <move element="product.info.type" destination="product.info.main.wrap" after="price.group"/>
+        <move element="catalog.product.related" destination="slide.product" before="recently"/>
 </page>

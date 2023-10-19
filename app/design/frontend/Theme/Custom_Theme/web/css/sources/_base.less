@@ -16,73 +16,95 @@ html {
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: @font-size-base;
-    font-weight: 400;
-    line-height: 1.4;
     color: #000;
     overflow-x: hidden;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 2rem;
+    letter-spacing: 0.07rem;
 }
 
-.d-flex{
+.d-flex {
     display: flex;
 }
 
-.container{
+.container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
 }
 
-
-li{
-     list-style: none !important;
+li {
+    list-style: none !important;
 }
 
-a{
+a {
     text-decoration: none;
     display: inline-block;
-    &:hover{
+    &:hover {
         text-decoration: none;
     }
 }
 
- img{
+img {
     display: inline-block;
- }
+}
 
- .navigation, 
- .breadcrumbs, 
- .page-header .header.panel, 
- .header.content, 
- .footer.content, 
- .page-wrapper > .widget, 
- .page-wrapper > .page-bottom, 
- .block.category.event, 
- .top-container, 
- .page-main {
+.navigation,
+.breadcrumbs,
+.page-header .header.panel,
+.header.content,
+.footer.content,
+.page-wrapper > .widget,
+.page-wrapper > .page-bottom,
+.block.category.event,
+.top-container,
+.page-main {
     max-width: unset !important;
     padding-left: unset !important;
     padding-right: unset !important;
- }
+}
 
- h1,h2,h3,h4,h5,p,textarea{
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+textarea {
     margin: 0;
- }
+}
 
- .main-title{
+.main-title {
     font-size: 2.4rem;
     font-weight: 600;
     line-height: 3.2rem;
     margin-bottom: 4rem;
-    .line-through{
-        height: .1rem;
-        background: #EDEDED;
+    .line-through {
+        display: block;
+        height: 0.1rem;
+        background: #ededed;
         margin-top: 1.4rem;
-        &.hide{
+        &.hide {
             display: none;
         }
     }
- }
+}
 
+.breadcrumbs{
+    background: #F1F1F1;
+    margin-bottom: 0 !important;
+    margin-top: 2.4em;
+    ul.items{
+        max-width: 120rem !important;
+    margin: 0 auto;
+    padding: 1.1rem 2rem 0.9rem 2rem!important;
+    }
+}
 
+.widget.block-static-block,
+#contentarea{
+    display: none;
+}
