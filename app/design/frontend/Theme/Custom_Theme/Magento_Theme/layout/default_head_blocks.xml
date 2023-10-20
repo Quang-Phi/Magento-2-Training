@@ -5,6 +5,9 @@
         <link src="js/slider.js"/>
         <link src="js/tab.js"/>
         <link src="js/footer.js"/>
+
+        <!-- add require js -->
+        <link src="requirejs/require.js"/>
         
         <!-- Font Awesome -->
         <css src="sources/fonts/fontawesome-free-6.1.2-web/fontawesome-free-6.1.2-web/css/all.min.css" />
