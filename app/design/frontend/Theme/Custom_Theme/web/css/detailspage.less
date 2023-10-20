@@ -3,14 +3,11 @@
 #maincontent {
     .column.main {
         .container {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            padding: 4rem 2rem;
+            padding-top: 4rem ;
+            padding-bottom: 4rem;
             .page-title-wrapper.product {
-                display: flex;
+                .flex(flex-start, unset);
                 flex-direction: column;
-                align-items: flex-start;
                 gap: 0.8rem;
                 .page-title {
                     margin-bottom: 0 !important;
@@ -19,12 +16,10 @@
                     letter-spacing: 0.18rem;
                 }
                 .sup-page-title {
-                    display: flex;
-                    align-items: center;
+                    .flex(center, unset);
                     flex-direction: row-reverse;
                     gap: 0.8rem;
                     margin-bottom: 0.8rem;
-
                     .product-info-stock-sku {
                         .product.attribute.sku {
                             display: flex;
@@ -61,47 +56,61 @@
                 flex-direction: row-reverse;
                 justify-content: flex-end;
                 gap: 2.4rem;
+                @media screen and (max-width: 768px) {
+                    flex-direction: column;
+                }
                 .product.media {
-                    width: 38.4rem;
                     flex-shrink: 0;
-                    .gallery-placeholder {
-                        .fotorama-item {
-                            .fotorama__wrap {
-                                display: flex;
-                                flex-direction: column;
-                                align-items: flex-start;
-                                gap: 1rem;
-                                .fotorama__stage {
-                                    width: 38.4rem !important;
-                                    height: 38.4rem !important;
-                                    .fotorama__stage__shaft {
-                                        width: 100% !important;
-                                    }
-                                }
-                                .fotorama__nav-wrap {
-                                    width: 100%;
-                                    .fotorama__nav {
-                                        .fotorama__nav__shaft {
-                                            .fotorama__thumb-border {
-                                                display: none;
-                                            }
-                                            .fotorama__nav__frame {
-                                                width: 6.5rem !important;
-                                                height: 6.5rem !important;
-                                                &.fotorama__active {
-                                                    border: 0.2rem solid #ba418a;
-                                                }
-                                            }
-                                            .fotorama__nav__frame
-                                                + .fotorama__nav__frame {
-                                                margin-left: 1.5rem;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
+                    max-width: 38.4rem;
+                    @media screen and (max-width: 768px) {
+                        width: 100%;
+                        max-width: 100%;
                     }
+                    // .gallery-placeholder {
+                    //     .fotorama-item {
+                    //         .fotorama__wrap {
+                    //             display: flex;
+                    //             flex-direction: column;
+                    //             align-items: flex-start;
+                    //             gap: 1rem;
+                    //             .fotorama__stage {
+                    //                 width: 38.4rem !important;
+                    //                 height: 38.4rem !important;
+                    //                 .fotorama__stage__shaft {
+                    //                     width: 100% !important;
+                    //                 }
+                    //             }
+                    //             .fotorama__nav-wrap {
+                    //                 width: 100%;
+                    //                 .fotorama__nav {
+                    //                     .fotorama__nav__shaft {
+                    //                         .fotorama__thumb-border {
+                    //                             display: none;
+                    //                         }
+                    //                         .fotorama__nav__frame {
+                    //                             width: 6.5rem !important;
+                    //                             height: 6.5rem !important;
+                    //                             @media screen and (max-width: 768px) {
+                    //                                 height: 3rem;
+                    //                                 width: 1.8rem;
+                    //                             }
+                    //                             &.fotorama__active {
+                    //                                 border: 0.2rem solid #ba418a;
+                    //                                 @media screen and (max-width: 768px) {
+                    //                                     border: unset;
+                    //                                 }
+                    //                             }
+                    //                         }
+                    //                         .fotorama__nav__frame
+                    //                             + .fotorama__nav__frame {
+                    //                             margin-left: 1.5rem;
+                    //                         }
+                    //                     }
+                    //                 }
+                    //             }
+                    //         }
+                    //     }
+                    // }
                 }
                 .product-info-main {
                     width: unset !important;
@@ -190,73 +199,73 @@
                                 }
                             }
                         }
-                        .product-options-bottom {
-                            display: flex;
-                            gap: 1.6rem;
-                            align-items: center;
-                            margin: 2.4rem 0;
-                            padding: 2.4rem 0;
-                            border-top: 0.1rem solid #b8b8b8;
-                            border-bottom: 0.1rem solid #b8b8b8;
-
-                            .box-tocart {
+                    }
+                    .product-options-bottom,
+                    .product-add-form {
+                        display: flex;
+                        gap: 1.6rem;
+                        align-items: center;
+                        margin: 2.4rem 0;
+                        padding: 2.4rem 0;
+                        border-top: 0.1rem solid #b8b8b8;
+                        border-bottom: 0.1rem solid #b8b8b8;
+                        .box-tocart {
+                            margin: 0 !important;
+                            .fieldset {
                                 margin: 0 !important;
-                                .fieldset {
-                                    margin: 0 !important;
-                                }
-                                .field.qty {
-                                    color: transparent;
-                                    padding-right: 1.6rem !important;
-                                    label {
-                                        span::after {
-                                            content: "Quantity";
-                                            position: relative;
-                                            left: -2.5rem;
-                                            color: #333;
-                                        }
-                                    }
-                                    .control {
+                            }
+                            .field.qty {
+                                color: transparent;
+                                padding-right: 1.6rem !important;
+                                label {
+                                    span::after {
+                                        content: "Quantity";
                                         position: relative;
-                                        &::before {
-                                            position: absolute;
-                                            content: "-";
-                                            top: 50%;
-                                            transform: translateY(-50%);
-                                            left: 1rem;
-                                            font-size: 1.6rem;
-                                            font-weight: 400;
-                                            color: #333;
-                                        }
-                                        &::after {
-                                            position: absolute;
-                                            top: 50%;
-                                            transform: translateY(-50%);
-                                            content: "+";
-                                            right: 1rem;
-                                            font-size: 1.6rem;
-                                            font-weight: 400;
-                                            color: #333;
-                                        }
-                                        input {
-                                            border-radius: 0.4rem;
-                                            border: 0.1rem solid #b8b8b8;
-                                            background: #fff;
-                                            width: 9.9rem;
-                                            height: 3.6rem;
-                                        }
+                                        left: -2.5rem;
+                                        color: #333;
                                     }
                                 }
-                                .actions {
-                                    padding-top: 0 !important;
-                                    button {
-                                        display: flex;
-                                        width: 20rem;
-                                        padding: 1.6rem 1.2rem;
-                                        justify-content: center;
-                                        align-items: center;
-                                        gap: 1rem;
-                                        background-color: #93117b;
+                                .control {
+                                    position: relative;
+                                    &::before {
+                                        position: absolute;
+                                        content: "-";
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                        left: 1rem;
+                                        font-size: 1.6rem;
+                                        font-weight: 400;
+                                        color: #333;
                                     }
+                                    &::after {
+                                        position: absolute;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                        content: "+";
+                                        right: 1rem;
+                                        font-size: 1.6rem;
+                                        font-weight: 400;
+                                        color: #333;
+                                    }
+                                    input {
+                                        border-radius: 0.4rem;
+                                        border: 0.1rem solid #b8b8b8;
+                                        background: #fff;
+                                        width: 9.9rem;
+                                        height: 3.6rem;
+                                    }
+                                }
+                            }
+                            .actions {
+                                padding-top: 0 !important;
+                                button {
+                                    display: flex;
+                                    width: 20rem;
+                                    padding: 1.6rem 1.2rem;
+                                    justify-content: center;
+                                    align-items: center;
+                                    gap: 1rem;
+                                    background-color: #93117b;
                                 }
                             }
                         }
@@ -314,3 +323,4 @@
         }
     }
 }
+

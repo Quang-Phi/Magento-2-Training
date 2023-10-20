@@ -13,7 +13,7 @@
             <!-- end hero banner -->
 
             <!-- Top categories -->
-            <container name="top-category" as="top-category" after="hero-banner"  htmlTag="div" htmlClass="top-category">
+            <container name="top-category"  after="hero-banner"  htmlTag="div" htmlClass="top-category">
                     <block class="Magento\Framework\View\Element\Template" name="main.title.cate" template="Magento_Theme::html/maintitle.phtml">
                          <arguments>
                             <argument name="custom_text" xsi:type="string">Top Categories of the Month</argument>
@@ -26,7 +26,7 @@
             <!-- end top categories -->
 
             <!-- deals -->
-             <container name="deals" as="deals" after="top-category"  htmlTag="div" htmlClass="deals">
+             <container name="deals" after="top-category"  htmlTag="div" htmlClass="deals">
                     <block class="Magento\Framework\View\Element\Template" name="main.title.deals" template="Magento_Theme::html/maintitle.phtml">
                          <arguments>
                             <argument name="custom_text" xsi:type="string">Deal of The Day</argument>
@@ -42,7 +42,7 @@
             <!--end  deal -->
 
             <!-- promotion banner -->
-             <container name="promotion-banner" as="promotion-banner" after="main.deals"  htmlTag="div" htmlClass="promotion-banner">
+             <container name="promotion-banner" after="main.deals"  htmlTag="div" htmlClass="promotion-banner">
                     <block class="Magento\Framework\View\Element\Template" name="main.promotion.banner" template="Magento_Theme::html/home/promotionbanner.phtml"/>
             </container>
             <!--end  promotion banner -->

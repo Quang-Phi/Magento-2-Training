@@ -4,34 +4,82 @@ footer {
     .footer.content {
         border: none !important;
         padding-bottom: 0 !important;
+        margin-top: 2rem !important;
+        padding-top: 2rem !important;
         .container {
-            display: flex;
             align-items: flex-start;
             gap: 2.4rem;
             justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 0 1.6rem;
+            @media screen and (max-width: 992px) {
+                gap: unset;
+            }
             .col-footer {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 2rem;
                 display: flex;
-                .title {
-                    font-size: 1.6rem;
-                    font-weight: 600;
-                    line-height: 2rem;
-                    letter-spacing: 0.08rem;
+                @media screen and (max-width: 992px) {
+                    width: 33%;
+                }
+                @media screen and (max-width: 768px) {
+                    width: 100%;
+                    border-top: 0.1rem solid;
+                    padding-top: 0.4rem;
                     color: #fff;
                 }
-                .links {
+                .title {
+                    color: #fff;
                     display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    gap: 0.4rem;
-                    margin-bottom: 0 !important;
-                    padding-right: 0 !important;
-                    li {
+                    justify-content: space-between;
+                    width: 100%;
+                    h3 {
+                        font-size: 1.6rem;
+                        font-weight: 600;
+                        line-height: 2rem;
+                        letter-spacing: 0.08rem;
+                    }
+                    .action{
+                        transform: rotate(0deg);
+                        display: none;
+                         @media screen and (max-width: 768px) {
+                            display: block;
+                         }
+                        &.down{
+                            svg {
+                               transform: rotate(180deg);
+                               transition: all 0.3s ease;
+                            }
+                        }
+                    }
+                }
+                .content{
+                    &.show{
+                        opacity: 1;
+                        visibility: visible;
+                        height: 15rem;
+                        transition: all 0.3s ease;
+                    }
+                    @media screen and (max-width: 768px) {
+                        opacity: 0;
+                        visibility: hidden;
+                        height: 0;
+                        transition: all 0.3s ease;
+                    }
+                    .links {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 0.4rem;
                         margin-bottom: 0 !important;
-                        a {
-                            color: #fff;
+                        padding-right: 0 !important;
+                        li {
+                            margin-bottom: 0 !important;
+                            a {
+                                color: #fff;
+                            }
                         }
                     }
                 }
@@ -40,6 +88,11 @@ footer {
                 // width: 282px;
             }
             .company {
+                .content{
+                    gap: 2rem;
+                    display: flex;
+                    flex-direction: column;
+                }
                 .card-type {
                     display: flex;
                     flex-direction: column;
@@ -61,19 +114,36 @@ footer {
                 }
             }
             .app {
-                gap: 3rem;
-                .follow,
-                .app-btn {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    gap: 1.2rem;
-                }
-                .app-btn {
-                    .group-btn {
+                gap: 1.2rem;
+                .content{
+                    &.show{
+                        height: 20rem;
+                    }
+                    .app-btn {
                         display: flex;
                         flex-direction: column;
-                        gap: 0.8rem;
+                        align-items: flex-start;
+                        gap: 1.2rem;
+                        margin-top: 3rem;
+                        @media screen and (max-width: 768px) {
+                            
+                        }
+                        h3{
+                        font-size: 1.6rem;
+                        font-weight: 600;
+                        line-height: 2rem;
+                        letter-spacing: 0.08rem;
+                        color: #fff;
+                        
+                        }
+                        .group-btn {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 0.8rem;
+                            a{
+                                height: 4rem;
+                            }
+                        }
                     }
                 }
             }
@@ -83,6 +153,25 @@ footer {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 0.5rem;
+                h3{
+                    color: #fff;
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    font-size: 1.8rem;
+                    font-weight: 600;
+                    line-height: 2.5rem;
+                }
+                @media screen and (max-width: 992px) {
+                    width: 100%;
+                    padding-top: .4rem;
+                    margin-top: 2.4rem;
+                }
+                @media screen and (max-width: 768px) {
+                    border-bottom: .1rem solid #fff;
+                    margin-top: 0;
+                    padding-bottom: 4rem;
+                }
                 p {
                     color: #fff;
                 }
@@ -96,6 +185,12 @@ footer {
             padding: 1.6rem 2rem;
             border-top: 0.01rem solid #d252a6;
             align-items: center;
+            @media screen and (max-width: 768px) {
+                margin-top: 0;
+                flex-direction: column;
+                 gap: 1.6rem;
+                 border-top: none;
+            }
             .copyright,
             .bugs {
                 margin-top: 0 !important;

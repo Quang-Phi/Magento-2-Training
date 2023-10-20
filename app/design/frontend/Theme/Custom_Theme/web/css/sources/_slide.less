@@ -18,6 +18,10 @@
                 align-items: flex-start;
                 gap: 0.6rem;
                 flex-shrink: 0;
+                .product-img,
+                .product-img img {
+                    width: 100%;
+                }
                 .product-content {
                     .product-name {
                         p {
@@ -198,4 +202,7 @@
 
 .slick-arrow {
     background-color: transparent !important;
+    @media screen and (max-width: 576px) {
+        display: none !important;
+    }
 }

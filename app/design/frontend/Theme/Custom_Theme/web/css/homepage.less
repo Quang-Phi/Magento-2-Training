@@ -4,10 +4,8 @@
     .column.main {
         padding-bottom: 0 !important;
         .container {
-            display: flex;
-            padding: 4rem 2rem;
-            flex-direction: column;
-            gap: 2rem;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
             > div {
                 padding: 2rem 0;
             }
@@ -23,7 +21,7 @@
                 *:not(button.slick-arrow) {
                     height: 100%;
                 }
-                img{
+                img {
                     width: 100%;
                 }
             }
@@ -41,17 +39,17 @@
             padding: 4rem 0;
             .flex(center,unset);
             gap: 1.2rem;
-            span{
+            span {
                 height: 5.3rem;
-                width: .1rem;
-                background: #EDEDED;
+                width: 0.1rem;
+                background: #ededed;
             }
             .feature-content {
                 display: flex;
                 gap: 2.4rem;
                 flex: 1;
                 &:not(:first-child) {
-                    justify-content: center
+                    justify-content: center;
                 }
                 .logo {
                     .flex(center,center);
@@ -78,15 +76,10 @@
     }
     .top-category {
         .category-content {
-            .row{
+            .row {
                 margin: 0 -1.2rem !important;
-                .col{
+                .col {
                     padding: 0 1.2rem !important;
-                }
-                &.2{
-                    a{
-                        margin-bottom: 0;
-                    }
                 }
             }
             a {
@@ -99,7 +92,10 @@
                 color: #000;
                 padding: 0.6rem 3.6rem 0.5rem 0.4rem;
                 margin-bottom: 2.4rem;
-                
+                @media screen and (max-width: 768px) {
+                    margin-bottom: 1.6rem;
+                }
+
                 &:hover {
                     border-color: #93117b;
                 }
@@ -135,12 +131,12 @@
             }
         }
     }
-    .seller{
+    .seller {
         padding: 0;
-        .main-title{
+        .main-title {
             padding-top: 2rem;
         }
-        .product-slick-slider{
+        .product-slick-slider {
             margin-bottom: 4rem;
         }
     }
@@ -217,6 +213,112 @@
         &::after {
             left: unset;
             right: -50%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #maincontent {
+        .news {
+            .custom-tab {
+                .tab-content {
+                    .tab-pane {
+                        flex-wrap: wrap;
+                        gap: unset !important;
+                        .block {
+                            width: 48.7%;
+                            margin-bottom: 1.6rem !important;
+                        }
+                    }
+                }
+            }
+        }
+        .promotion-banner {
+            .col:first-child{
+                .pro-banner-content{
+                    margin-bottom: 1.6rem;
+                    img{
+                        max-height: 20rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #maincontent {
+        .hero-banner {
+            .hero-banner-content {
+                flex-direction: column;
+                gap: 1.6rem;
+                .left-slider {
+                    width: 100% !important;
+                    max-height: 18.5rem;
+                    margin-right: 0;
+                }
+                .right-imgs {
+                    width: 100% !important;
+                    height: unset;
+                    display: flex;
+                    gap: 1.6rem;
+                    img {
+                        width: calc(50% - 0.8rem);
+                        max-height: 18.5rem;
+                        margin-bottom: 0 !important;
+                    }
+                }
+            }
+            .selling-feature {
+                gap: unset;
+                flex-wrap: wrap;
+                padding: 4rem 0 2.4rem 0;
+                span {
+                    display: none;
+                }
+                .feature-content {
+                    flex: unset;
+                    width: 50%;
+                    margin-bottom: 1.6rem;
+                    justify-content: start !important;
+                }
+            }
+        }
+        .promotion-banner {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #maincontent {
+        .hero-banner {
+            .hero-banner-content {
+                .right-imgs {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.6rem;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+        .news {
+            .custom-tab {
+                .tabsnav-wrap{
+                    flex-direction: column;
+                    .nav.nav-tabs{
+                        justify-content: space-between;
+                        padding-top: 1.4rem;
+                        border-top: 0.1rem solid #fff;
+                        margin-top: 2rem;
+                    }
+                }
+            }
         }
     }
 }

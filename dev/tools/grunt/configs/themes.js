@@ -50,5 +50,15 @@ module.exports = {
             'css/styles'
         ],
         dsl: 'less'
-    }
+    },
+    Custom_Theme: {
+        area: 'frontend',
+        name: 'Theme/Custom_Theme',
+        locale: 'en_US',
+        files: [
+            'css/styles-m',
+            'css/styles-l'
+        ],
+        dsl: 'less'
+    },
 };

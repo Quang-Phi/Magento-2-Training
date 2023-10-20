@@ -6,13 +6,14 @@
         <!-- <referenceContainer name="header.panel.wrapper" remove="true" ></referenceContainer> -->
         <referenceContainer name="top.links" remove="true" ></referenceContainer>
         <referenceBlock name="advanced-search-link" remove="true" ></referenceBlock>
-        <referenceBlock name="navigation.sections" remove="true" ></referenceBlock>
+        <!-- <referenceBlock name="navigation.sections" remove="true" ></referenceBlock> -->
 
 
         <!-- header-->
         <referenceContainer name="header-wrapper" >
             <container htmlTag="div" htmlClass="container">
                 <block class="Magento\Framework\View\Element\Template" name="header.language" template="Magento_Theme::html/header/language.phtml" />
+               
                 <container name="header-main-content"  htmlTag="div" htmlClass="header-main-content" after="header.language">
                     <block class="Magento\Theme\Block\Html\Header\Logo" name="logo">
                         <arguments>
@@ -92,15 +93,8 @@
                         <container name="user-cart"  htmlTag="div" htmlClass="user-cart" />
                     </container>
                 </container>
+                
             </container>
-
-            <block class="Magento\Framework\View\Element\Template" name="store.menu" group="navigation-sections" template="Magento_Theme::html/container.phtml">
-                    <arguments>
-                        <argument name="title" translate="true" xsi:type="string">Menu</argument>
-                    </arguments>
-                    <block class="Magento\Theme\Block\Html\Topmenu" name="catalog.topnav" template="Magento_Theme::html/header/topmenu.phtml" ttl="3600" before="-"/>
-                </block>
-
         </referenceContainer>
 
         <referenceContainer name="header.panel" htmlTag="div" htmlClass="container">
@@ -110,7 +104,7 @@
         <move element="register-link" destination="authen.links" />
         <move element="authorization-link" destination="authen.links" before="register-link"/>
         <move element="minicart" destination="user-cart" />
-        <move element="store.menu" destination="header-wrapper" />
+        <!-- <move element="store.menu" destination="header-wrapper" /> -->
         <!-- end Header -->
 
 

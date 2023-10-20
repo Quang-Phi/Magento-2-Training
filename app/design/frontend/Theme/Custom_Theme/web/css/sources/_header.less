@@ -1,13 +1,28 @@
 header {
+    border-bottom: unset !important;
     .panel.wrapper {
         border: none !important;
         position: relative;
         .container {
             height: 6.4rem;
+            padding: 0 1.6rem;
+            display: block;
             img {
                 display: block;
                 width: 100%;
                 height: 6.4rem;
+               
+            }
+            .lg-banner{
+                @media screen and(max-width: 576px) {
+                    display: none;
+                }
+            }
+            .mb-banner {
+                display: none;
+                @media screen and(max-width: 576px) {
+                    display: block;
+                }
             }
         }
         &::after {
@@ -33,6 +48,9 @@ header {
             display: flex;
             flex-direction: column;
             gap: 1.6rem;
+            @media screen and (max-width: 768px) {
+                padding: 0 1.6rem;
+            }
             .language {
                 padding-top: 0.8rem;
                 display: flex;
@@ -72,13 +90,54 @@ header {
                 gap: 2.4rem;
                 align-items: center;
                 padding-bottom: 1.8rem;
+                @media screen and (max-width: 768px) {
+                    justify-content: space-between;
+                    position: relative;
+                }
+                .action.nav-toggle {
+                    @media screen and (max-width: 768px) {
+                        right: 0;
+                        left: unset;
+                        top: 1.5rem;
+                        &::before {
+                            overflow: unset !important;
+                            color: #fff;
+                            font-size: 3.8rem;
+                        }
+                    }
+                }
                 a.logo {
                     margin: 0 !important;
+                    @media screen and (max-width: 992px) {
+                        max-width: 16rem;
+                    }
+                    @media screen and (max-width: 768px) {
+                        margin-bottom: 6rem !important;
+                    }
                 }
                 .custom-search {
                     flex: 1;
+                    @media screen and (max-width: 992px) {
+                        padding-left: 0;
+                    }
+                    @media screen and (max-width: 768px) {
+                        position: absolute;
+                        bottom: 1.8rem;
+                        left: 1.6rem;
+                        right: 1.6rem;
+                        .label {
+                            position: absolute;
+                            right: -1.5rem;
+                            line-height: 4.2rem;
+                            border-radius: 0 0.8rem 0.8rem 0;
+                            background: #ededed;
+                            width: 5.6rem;
+                            text-align: center;
+                        }
+                    }
                     .control {
                         padding: 0 !important;
+                        border: none !important;
                         input {
                             padding: 0;
                             margin: 0;
@@ -119,14 +178,27 @@ header {
                     align-items: center;
                     gap: 4rem;
                     margin-left: 3.9rem;
+                    @media screen and (max-width: 992px) {
+                        gap: 3.2rem;
+                        margin-left: 0;
+                    }
+                    @media screen and (max-width: 768px) {
+                        margin-bottom: 6rem;
+                    }
                     .user-wishlist {
                         display: flex;
                         align-items: center;
+                        @media screen and (max-width: 768px) {
+                            display: none;
+                        }
                     }
                     .user-cart {
                         display: flex;
                         align-items: center;
                         justify-content: center;
+                        @media screen and (max-width: 768px) {
+                            margin-right: 7.8rem;
+                        }
                         .custom-cart {
                             width: 3.2rem;
                             height: 3.2rem;
@@ -149,6 +221,9 @@ header {
                     .user-authen {
                         display: flex;
                         align-items: center;
+                        @media screen and (max-width: 768px) {
+                            display: none;
+                        }
                         .user-links {
                             margin-bottom: 0 !important;
                             margin-left: 1.2rem;
@@ -164,59 +239,6 @@ header {
                             }
                             li:nth-child(1) {
                                 font-weight: 700;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        nav.navigation {
-            background-color: #ba418a;
-            color: #fff;
-            ul#ui-id-2 {
-                padding: 0 !important;
-                display: flex;
-                gap: 2.4rem;
-                li {
-                    margin: 0 !important;
-                    a {
-                        padding: 0 !important;
-                        line-height: 4.8rem !important;
-                        display: flex;
-                        gap: 0.8rem;
-                        flex-direction: row-reverse;
-                        align-items: center;
-                        span.ui-menu-icon {
-                            width: 3.2rem;
-                            height: 3.2rem;
-                            position: unset !important;
-                            position: relative !important;
-                            &::after {
-                                font-size: 3.2rem;
-                                line-height: 3.2rem;
-                                position: absolute;
-                            }
-                        }
-                        span {
-                            text-transform: uppercase;
-                            font-weight: 500;
-                            font-size: 1.6rem;
-                            line-height: 4.8rem;
-                            letter-spacing: 0.08rem;
-                        }
-                    }
-                    .submenu {
-                        li {
-                            a {
-                                span:not(.ui-menu-icon) {
-                                    margin-right: 1rem;
-                                }
-                                &:hover {
-                                    * {
-                                        background: #e8e8e8;
-                                        color: #ba418a !important;
-                                    }
-                                }
                             }
                         }
                     }
