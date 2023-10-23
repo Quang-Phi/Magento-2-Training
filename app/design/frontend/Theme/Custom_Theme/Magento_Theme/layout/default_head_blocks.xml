@@ -1,16 +1,8 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
-        <css src="css/style.css" />
-        <link src="js/slider.js"/>
-        <link src="js/tab.js"/>
-        <link src="js/footer.js"/>
-
+        <css src="Magento_Theme/css/style.css" />
         <!-- add require js -->
         <link src="requirejs/require.js"/>
-        
-        <!-- Font Awesome -->
-        <css src="sources/fonts/fontawesome-free-6.1.2-web/fontawesome-free-6.1.2-web/css/all.min.css" />
-        <script src="https://kit.fontawesome.com/d9876ed7d9.js"></script>
     </head>
 </page>
