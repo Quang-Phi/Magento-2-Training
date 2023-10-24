@@ -1,0 +1,8 @@
+<div style="width: 70%;" class="left-slider">
+    <div  class="slick-slider" data-bind="foreach: {data: slideImgArr, afterRender: initSlickSlider}">
+         <img data-bind="attr: { src: $data }" />
+    </div>
+</div>
+<div style="width: 30%;"  data-bind="foreach: rightImgArr" class="right-imgs">
+    <img style="height: calc(50% - 1.2rem);" data-bind="attr: { src: $data }" alt="">
+</div>
