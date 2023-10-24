@@ -6,15 +6,13 @@
         <!-- <referenceContainer name="header.panel.wrapper" remove="true" ></referenceContainer> -->
         <referenceContainer name="top.links" remove="true" ></referenceContainer>
         <referenceBlock name="advanced-search-link" remove="true" ></referenceBlock>
-        <!-- <referenceBlock name="navigation.sections" remove="true" ></referenceBlock> -->
-
 
         <!-- header-->
         <referenceContainer name="header-wrapper" >
-            <container htmlTag="div" htmlClass="container">
-                <block class="Magento\Framework\View\Element\Template" name="header.language" template="Magento_Theme::html/header/language.phtml" />
+            <container name="header.content.container" htmlTag="div" htmlClass="container">
+                <!-- <block class="Magento\Framework\View\Element\Template" name="header.language" template="Magento_Theme::html/header/language.phtml" /> -->
                
-                <container name="header-main-content"  htmlTag="div" htmlClass="header-main-content" after="header.language">
+                <container name="header-main-content"  htmlTag="div" htmlClass="header-main-content">
                     <block class="Magento\Theme\Block\Html\Header\Logo" name="logo">
                         <arguments>
                             <argument name="logoPathResolver" xsi:type="object">Magento\Theme\ViewModel\Block\Html\Header\LogoPathResolver</argument>
@@ -97,6 +95,10 @@
             </container>
         </referenceContainer>
 
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" name="custom.load-js" template="Magento_Theme::html/load-js.phtml" before="-" />
+        </referenceContainer>
+
         <referenceContainer name="header.panel" htmlTag="div" htmlClass="container">
             <block class="Magento\Framework\View\Element\Template" name="top.banner" template="Magento_Theme::html/home/topbanner.phtml"/>
         </referenceContainer>
@@ -104,6 +106,7 @@
         <move element="register-link" destination="authen.links" />
         <move element="authorization-link" destination="authen.links" before="register-link"/>
         <move element="minicart" destination="user-cart" />
+        <!-- <move element="store_language" destination="header.content.container" before="-"/> -->
         <!-- <move element="store.menu" destination="header-wrapper" /> -->
         <!-- end Header -->
 
