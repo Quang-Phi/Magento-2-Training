@@ -217,34 +217,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
-    #maincontent {
-        .news {
-            .custom-tab {
-                .tab-content {
-                    .tab-pane {
-                        flex-wrap: wrap;
-                        gap: unset !important;
-                        .block {
-                            width: 48.7%;
-                            margin-bottom: 1.6rem !important;
-                        }
-                    }
-                }
-            }
-        }
-        .promotion-banner {
-            .col:first-child{
-                .pro-banner-content{
-                    margin-bottom: 1.6rem;
-                    img{
-                        max-height: 20rem;
-                    }
-                }
-            }
-        }
-    }
-}
+
 
 @media screen and (max-width: 768px) {
     #maincontent {
@@ -285,8 +258,30 @@
             }
         }
         .promotion-banner {
+            .col:first-child{
+                .pro-banner-content{
+                    margin-bottom: 1.6rem;
+                    img{
+                        max-height: 20rem;
+                    }
+                }
+            }
             img {
                 width: 100%;
+            }
+        }
+        .news {
+            .custom-tab {
+                .tab-content {
+                    .tab-pane {
+                        flex-wrap: wrap;
+                        gap: unset !important;
+                        .block {
+                            width: 48.7%;
+                            margin-bottom: 1.6rem !important;
+                        }
+                    }
+                }
             }
         }
     }
