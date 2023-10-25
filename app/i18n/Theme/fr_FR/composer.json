@@ -1,0 +1,20 @@
+{
+    "name" : "Theme/magento2-language-french",
+    "description": "Language pack for French",
+    "version": "1.0.0",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "require": {
+        "php": ">=7.2.5",
+        "magento/framework": "*",
+        "magento/language-pack": "*"
+    },
+    "type": "magento2-language",
+    "autoload": {
+        "files": [
+            "registration.php"  
+        ]
+    }
+}
