@@ -24,7 +24,6 @@ body {
     font-weight: 500;
     line-height: 2rem;
     letter-spacing: 0.07rem;
-    background: orange;
 }
 
 .d-flex {
@@ -39,7 +38,7 @@ body {
     flex-direction: column;
     gap: 2rem;
     position: relative;
-   
+
     @media screen and (max-width: 768px) {
         padding: 4rem 1.6rem;
     }
@@ -102,28 +101,27 @@ textarea {
     }
 }
 
-.breadcrumbs{
-    background: #F1F1F1;
+.breadcrumbs {
+    background: #f1f1f1;
     margin-bottom: 0 !important;
     margin-top: 2.4em;
-    ul.items{
+    ul.items {
         max-width: 120rem !important;
-    margin: 0 auto;
-    padding: 1.1rem 2rem 0.9rem 2rem!important;
+        margin: 0 auto;
+        padding: 1.1rem 2rem 0.9rem 2rem !important;
     }
 }
 
 .widget.block-static-block,
-#contentarea{
+#contentarea {
     display: none;
 }
-.sectionsnav-sections{
+.sectionsnav-sections {
     margin-bottom: 0 !important;
 }
 
 nav.navigation {
     background-color: #ba418a;
-    color: #fff !important;
     @media screen and (max-width: 768px) {
         background-color: inherit;
         color: inherit;
@@ -131,47 +129,29 @@ nav.navigation {
     > ul {
         max-width: 120rem !important;
         margin: 0 auto;
-        padding: 0 2rem !important;
+        padding: 0.4rem 1.6rem !important;
         display: flex;
         gap: 2.4rem;
         @media screen and (max-width: 768px) {
             display: block;
         }
-        li {
-            margin: 0 !important;
-            > a{
-                color: #fff;
-                @media screen and (max-width: 768px) {
-                    color: inherit;
-                }
-            }
-            a {
-                padding: 0 !important;
-                line-height: 4.8rem !important;
-                display: flex;
-                gap: 0.8rem;
-                flex-direction: row-reverse;
-                align-items: center;
-                @media screen and (max-width: 768px) {
-                    display: block;
-                }
-                span.ui-menu-icon {
-                    width: 3.2rem;
-                    height: 3.2rem;
-                    position: unset !important;
-                    position: relative !important;
-                    &::after {
-                        font-size: 3.2rem;
-                        line-height: 3.2rem;
-                        position: absolute;
-                    }
-                }
-                span {
+        li.level0 {
+            margin: 0;
+            a.level-top {
+                line-height: 2rem;
+                padding: 1rem;
+                span:not(.ui-menu-icon) {
                     text-transform: uppercase;
-                    font-weight: 500;
-                    font-size: 1.6rem;
-                    line-height: 4.8rem;
-                    letter-spacing: 0.08rem;
+                    color: #fff;
+                    &:hover {
+                        * {
+                            background: #e8e8e8;
+                            color: #ba418a !important;
+                        }
+                    }
+                    @media screen and (max-width: 768px) {
+                        color: #575757;
+                    }
                 }
             }
             .submenu {
@@ -192,7 +172,7 @@ nav.navigation {
         }
     }
 }
-.language.switcher-language{
+.language.switcher-language {
     position: absolute;
     top: 7.2rem;
     right: 0;
