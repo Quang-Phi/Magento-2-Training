@@ -51,7 +51,7 @@
                 <container name="related" after="catalog.product.related"  htmlTag="div" htmlClass="related">
                         <block class="Magento\Framework\View\Element\Template" name="main.title.related" template="Magento_Theme::html/maintitle.phtml">
                             <arguments>
-                                <argument name="custom_text" xsi:type="string">Related Product</argument>
+                                <argument name="custom_text" xsi:type="string" translate="true">Related Product</argument>
                                 <argument name="custom_line" xsi:type="string">hide</argument>
                             </arguments>
                         </block>
@@ -61,12 +61,12 @@
                 <container name="recently" htmlTag="div" htmlClass="recently">
                     <block class="Magento\Framework\View\Element\Template" name="catalog.title.recently" template="Magento_Theme::html/maintitle.phtml">
                          <arguments>
-                            <argument name="custom_text" xsi:type="string">Your Recently Viewd Products</argument>
+                            <argument name="custom_text" xsi:type="string" translate="true">Your Recently Viewd Products</argument>
                         </arguments>
                     </block>
                     <block class="Magento\Framework\View\Element\Template" name="catalog.product.recently" template="Magento_Theme::html/home/slideproduct.phtml">
                          <arguments>
-                            <argument name="custom_text" xsi:type="string">hidden</argument>
+                            <argument name="custom_text" xsi:type="string" translate="true">hidden</argument>
                             <argument name="custom_line" xsi:type="string">hide</argument>
                         </arguments>
                     </block>
