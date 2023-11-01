@@ -1,0 +1,20 @@
+<div class="form-wrap">
+    <form class="contact-form"  action="/contact" method="post" data-bind="submit: submitContact">
+        <div class="form-group">
+            <label for="name" data-bind="i18n: 'Name'"></label>
+            <input type="text" name="name" data-bind="attr: { placeholder: $t('Name') }" data-bind="value: inputNameVal"/>
+            <div class="error-text" data-bind="text: errors().name"></div>
+        </div>
+        <div class="form-group">
+            <label for="email" data-bind="i18n: 'Email'"></label>
+            <input type="email" name="email" data-bind="attr: { placeholder: $t('Email') }" data-bind="value: inputEmailVal"/>
+            <div class="error-text" data-bind="text: errors().email"></div>
+        </div>
+        <div class="form-group">
+            <label for="message" data-bind="i18n: 'Message'"></label>
+            <textarea name="message" data-bind="attr: { placeholder: $t('Message') }" data-bind="value: inputMessageVal"></textarea>
+            <div class="error-text" data-bind="text: errors().message"></div>
+        </div>
+        <button class="form-contact-submit" type="submit" data-bind="i18n: 'Submit'"></button>
+    </form>
+</div>
