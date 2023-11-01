@@ -8129,7 +8129,16 @@ Search,Tìm kiếm,theme,frontend/Theme/Custom_Theme
 "View All","Xem tất cả"
 "How To Make A Fresh Juice Blended For Your Family","Cách làm nước ép tươi ngon cho gia đình bạn"
 "Organic","Hữu cơ"
-
+"name" , "tên"
+"email", "email"
+"message","tin nhắn"
+"Submitted successfully, data","Đã gửi thành công, dữ liệu"
+"Submitted failed, data","Gửi thất bại, dữ liệu"
+"Name is required.","Tên là bắt buộc."
+"Name should only contain letters and spaces.","Tên chỉ được chứa chữ cái và khoảng trắng."
+"Email is required.","Email là bắt buộc."
+"Invalid email.","Email không hợp lệ."
+"Message is required.","Message là bắt buộc."
 
 
 
