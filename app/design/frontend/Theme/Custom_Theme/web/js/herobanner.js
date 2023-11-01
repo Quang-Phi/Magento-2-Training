@@ -20,7 +20,7 @@ define([
         rightImgArr: ko.observableArray([
             'https://phidinh.cmmage.app/static/version1698045694/frontend/Theme/Custom_Theme/en_US/images/herobanner-1.png',
             'https://phidinh.cmmage.app/static/version1698045694/frontend/Theme/Custom_Theme/en_US/images/herobanner-2.png',
-        ]),
+        ]),        
         
         initSlickSlider: function () {
             setTimeout(function () {
