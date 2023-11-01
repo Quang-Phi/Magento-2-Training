@@ -41,22 +41,22 @@ footer {
                         line-height: 2rem;
                         letter-spacing: 0.08rem;
                     }
-                    .action{
+                    .action {
                         transform: rotate(0deg);
                         display: none;
-                         @media screen and (max-width: 768px) {
+                        @media screen and (max-width: 768px) {
                             display: block;
-                         }
-                        &.down{
+                        }
+                        &.down {
                             svg {
-                               transform: rotate(180deg);
-                               transition: all 0.3s ease;
+                                transform: rotate(180deg);
+                                transition: all 0.3s ease;
                             }
                         }
                     }
                 }
-                .content{
-                    &.show{
+                .content {
+                    &.show {
                         opacity: 1;
                         visibility: visible;
                         height: 15rem;
@@ -88,7 +88,7 @@ footer {
                 // width: 282px;
             }
             .company {
-                .content{
+                .content {
                     gap: 2rem;
                     display: flex;
                     flex-direction: column;
@@ -115,8 +115,8 @@ footer {
             }
             .app {
                 gap: 1.2rem;
-                .content{
-                    &.show{
+                .content {
+                    &.show {
                         height: 20rem;
                     }
                     .app-btn {
@@ -125,19 +125,18 @@ footer {
                         align-items: flex-start;
                         gap: 1.2rem;
                         margin-top: 3rem;
-                        h3{
-                        font-size: 1.6rem;
-                        font-weight: 600;
-                        line-height: 2rem;
-                        letter-spacing: 0.08rem;
-                        color: #fff;
-                        
+                        h3 {
+                            font-size: 1.6rem;
+                            font-weight: 600;
+                            line-height: 2rem;
+                            letter-spacing: 0.08rem;
+                            color: #fff;
                         }
                         .group-btn {
                             display: flex;
                             flex-direction: column;
                             gap: 0.8rem;
-                            a{
+                            a {
                                 height: 4rem;
                             }
                         }
@@ -150,7 +149,7 @@ footer {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 0.5rem;
-                h3{
+                h3 {
                     color: #fff;
                     display: flex;
                     justify-content: space-between;
@@ -161,16 +160,55 @@ footer {
                 }
                 @media screen and (max-width: 992px) {
                     width: 100%;
-                    padding-top: .4rem;
+                    padding-top: 0.4rem;
                     margin-top: 2.4rem;
                 }
                 @media screen and (max-width: 768px) {
-                    border-bottom: .1rem solid #fff;
+                    border-bottom: 0.1rem solid #fff;
                     margin-top: 0;
                     padding-bottom: 4rem;
                 }
                 p {
                     color: #fff;
+                }
+            }
+        }
+        #contact-form {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.5);
+            .form-wrap {
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .contact-form {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    width: 50rem;
+                    padding: 3rem 2rem;
+                    background: #fff;
+                    border: 0.1rem solid #ccc;
+                    border-radius: 0.5rem;
+                    .form-group{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.8rem;
+                        label{
+                            font-weight: 600;
+                        }
+                        input{
+                            padding: .4rem .8rem;
+                        }
+                        .error-text{
+                            color: red;
+                        }
+                    }
                 }
             }
         }
@@ -185,8 +223,8 @@ footer {
             @media screen and (max-width: 768px) {
                 margin-top: 0;
                 flex-direction: column;
-                 gap: 1.6rem;
-                 border-top: none;
+                gap: 1.6rem;
+                border-top: none;
             }
             .copyright,
             .bugs {
