@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magento\Catalog\Controller\Product\View" type="Custom\Catalog\Controller\Product\View"/>
+    <type name="Magento\Catalog\Controller\Product\View">
+        <plugin name="custom_catalog_product_view" type="Custom\Catalog\Plugin\Product\View"/>
+    </type>
+</config>
