@@ -114,5 +114,8 @@ define(["ko", "jquery", "uiComponent", "mage/translate"], function (
                 },
             });
         },
+        closeContactForm: function () {
+            $("#contact-form").removeClass("active");
+        }
     });
 });

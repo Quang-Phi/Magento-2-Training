@@ -15,3 +15,12 @@ require(['jquery'], function ($) {
         });
     });
 });
+
+require(['jquery'], function ($) {
+    $(document).ready(function() {
+      $('#contact-btn').on('click', function() {
+        console.log('clicked');
+        $('#contact-form').addClass('active');
+      });
+})
+});

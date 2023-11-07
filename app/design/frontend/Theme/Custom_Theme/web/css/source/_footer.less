@@ -175,12 +175,15 @@ footer {
         }
         #contact-form {
             position: fixed;
+            opacity: 0;
+            visibility: hidden;
             bottom: 0;
             left: 0;
             right: 0;
             top: 0;
             z-index: 1000;
             background: rgba(0, 0, 0, 0.5);
+            transition:  all .3s ease;
             .form-wrap {
                 height: 100vh;
                 display: flex;
@@ -210,6 +213,10 @@ footer {
                         }
                     }
                 }
+            }
+            &.active{
+                opacity: 1;
+                visibility: visible;
             }
         }
         .end-footer {

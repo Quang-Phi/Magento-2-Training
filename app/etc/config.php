@@ -347,7 +347,13 @@ return [
         'Magento_WishlistGraphQl' => 1,
         'Magento_WishlistSampleData' => 1,
         'Custom_Breadcrumb' => 1,
+        'Custom_Catalog' => 1,
         'Custom_Footer' => 1,
+        'Custom_GetHtml' => 1,
+        'Custom_GetRoutes' => 1,
+        'Custom_Logger' => 1,
+        'Custom_MasterRouter' => 1,
+        'Custom_Price' => 1,
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeGraphQl' => 1,
         'Temando_ShippingRemover' => 1
