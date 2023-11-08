@@ -3,4 +3,7 @@
     <event name="controller_action_predispatch">
         <observer name="custom_logger_controller_action_predispatch" instance="Custom\Logger\Observer\ControllerActionPredispatch" />
     </event>
+    <event name="layout_generate_blocks_after">
+        <observer name="custom_logger_layout_generate_blocks_after" instance="Custom\Logger\Observer\LayoutGenerateBlocksAfterObserver" />
+    </event>
 </config>
