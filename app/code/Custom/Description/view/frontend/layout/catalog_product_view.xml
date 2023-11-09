@@ -7,5 +7,13 @@
                 </argument>
             </action>
         </referenceBlock>
+
+        <referenceBlock name="product.info.description">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">
+                    Custom_Description::custom_description.phtml
+                </argument>
+            </action>
+        </referenceBlock>
     </body>
 </page>
