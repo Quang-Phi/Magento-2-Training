@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<page 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd" 
+    layout="1column"
+>
+    <head>
+        <title>Training Page Title</title>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" name="background.color.block" template="Training_Render::template_3.phtml">
+            <arguments>
+                <argument name="background_color" xsi:type="string">lightskyblue</argument>
+            </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
