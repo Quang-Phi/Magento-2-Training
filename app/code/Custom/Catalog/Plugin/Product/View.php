@@ -2,26 +2,14 @@
 
 namespace Custom\Catalog\Plugin\Product;
 
-use Magento\Catalog\Controller\Product\View as MagentoView;
-use Psr\Log\LoggerInterface;
-use Magento\Catalog\Api\ProductRepositoryInterface;
+use Magento\Catalog\Block\Product\View as ProductView;
 
-class View extends MagentoView
+class View
 {
-
-    protected $logger;
-    protected $productRepository;
-    public function __construct(
-        LoggerInterface $logger,
-        ProductRepositoryInterface $productRepository
-    ) {
-        $this->logger = $logger;
-        $this->productRepository = $productRepository;
-    }
-    public function beforeExecute(MagentoView $subject)
+    public function afterToHtml(ProductView $subject, $html)
     {
-        $productId = $subject->getRequest()->getParam('id');
-        $product = $this->productRepository->getById($productId);
-        $this->logger->info("Product with ID $productId viewed: " . $product->getName());
+        $customHtml = '<div class="custom-text">My custom text</div>';
+        $html .= $customHtml;
+        return $html;
     }
 }
