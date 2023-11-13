@@ -1,0 +1,16 @@
+<div>
+    <h2>My Custom Attribute</h2>
+    <?php
+    $attributeValue = $block->getMyAttribute();
+    if ($attributeValue) {
+        $options = explode(',', $attributeValue);
+        echo "<ul>";
+        foreach ($options as $option) {
+            echo "<li>" . $option . "</li>";
+        }
+        echo "</ul>";
+    } else {
+        echo "<p>No options selected.</p>";
+    }
+    ?>
+</div>
