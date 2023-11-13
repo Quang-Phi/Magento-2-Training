@@ -1,6 +1,6 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-        <referenceBlock name="product.attributes">
+        <!-- <referenceBlock name="product.attributes">
             <action method="setTemplate">
                 <argument name="template" xsi:type="string">
                     Custom_Description::attr.phtml
@@ -14,6 +14,6 @@
                     Custom_Description::custom_description.phtml
                 </argument>
             </action>
-        </referenceBlock>
+        </referenceBlock> -->
     </body>
 </page>
