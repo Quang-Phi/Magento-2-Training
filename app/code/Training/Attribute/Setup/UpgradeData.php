@@ -35,29 +35,29 @@ class UpgradeData implements UpgradeDataInterface
         $eavSetup = $this->eavSetupFactory->create(['setup' => $setup]);
         $eavSetup->addAttribute(
             Product::ENTITY,
-            'my_attr_select',
+            'RAM',
             [
                 'type' => 'text',
-                'label' => 'My Attribute Select',
-                'input' => 'multiselect',
+                'label' => 'RAM',
+                'input' => 'select',
                 'source' => '',
                 'required' => false,
                 'visible' => true,
                 'user_defined' => true,
-                'searchable' => false,
-                'filterable' => false,
-                'comparable' => false,
+                'searchable' => true,
+                'filterable' => true,
+                'comparable' => true,
                 'visible_on_front' => true,
                 'used_in_product_listing' => true,
+                'used_in_layered_navigation' => \Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface::SCOPE_GLOBAL,
                 'backend' => 'Magento\Eav\Model\Entity\Attribute\Backend\ArrayBackend',
                 'option' => [
                     'values' => [
-                        'Option 1',
-                        'Option 2',
-                        'Option 3'
+                        '8GB',
+                        '16GB'
                     ]
                 ],
-                'attribute_set' => 'Default',
+                'attribute_set' => 'laptop',
                 'group' => 'General',
             ]
         );
