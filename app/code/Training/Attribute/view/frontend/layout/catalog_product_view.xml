@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
-    <body>
-        <referenceContainer name="product.info.main.wrap">
-            <block class="Training\Attribute\Block\CustomBlock" name="train.attribute.custom.block" template="Training_Attribute::my_custom_template.phtml" after="-"/>
-        </referenceContainer>
-    </body>
-</page>
