@@ -1,0 +1,9 @@
+<?php
+$urlInterface = \Magento\Framework\App\ObjectManager::getInstance()->get(\Magento\Framework\UrlInterface::class);
+$currentUrl = preg_replace('/[?&]filter=[^&]+/', '', $urlInterface->getCurrentUrl());
+?>
+<h4>Branch</h4>
+<?php echo "<br>"; ?>
+<a href="<?= $currentUrl . '?filter=macbook' ?>">Macbook</a>
+<?php echo "<br>"; ?>
+<a href="<?= $currentUrl . '?filter=asus' ?>">Asus</a>
