@@ -1,0 +1,6 @@
+<?php
+$products = $block->getProductList();
+foreach ($products as $product) {
+    echo "ID: " . $product->getId() . " - " . $product->getName() . "<br>" . "<br>";
+}
+?>
