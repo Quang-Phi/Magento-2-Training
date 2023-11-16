@@ -1,0 +1,26 @@
+<?php
+$lists = $block->getCustomEntityList();
+?>
+
+<div>
+    <ul>
+        <?php 
+        if (empty($lists)) {
+        ?>
+            <li>
+                <strong>No custom entities found</strong>
+            </li>
+        <?php   
+        } else {
+            foreach ($lists as $customEntity): ?>
+                <li>
+                    <strong><?= $block->escapeHtml($customEntity->getName()) ?></strong>
+                    <?php if ($description = $customEntity->getDescription()): ?>
+                        <p><?= $block->escapeHtml($description) ?></p>
+                    <?php endif; ?>
+                </li>
+            <?php endforeach;
+        }
+        ?>
+    </ul>
+</div>
