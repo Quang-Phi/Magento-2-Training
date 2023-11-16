@@ -1,0 +1,10 @@
+<?php
+list($customers, $objType) = $block->getCustomerList();
+echo 'Object Type: ' . $objType . '<br><br>';
+
+// Output the list of customers
+echo 'Customer List:<br>';
+foreach ($customers->getItems() as $customer) {
+    echo "ID: " . $customer->getId() . " - " . $customer->getFirstname() . ' ' . $customer->getLastname() . "<br><br>";
+}
+?>
