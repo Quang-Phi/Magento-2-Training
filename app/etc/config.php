@@ -366,6 +366,11 @@ return [
         'Training_DataTable' => 1,
         'Training_Logger' => 1,
         'Training_Render' => 1,
-        'Training_StoreInfo' => 1
+        'Training_StoreInfo' => 1,
+        'UnitFive_Customer' => 1,
+        'UnitFive_DataAPI' => 1,
+        'UnitFive_Entity' => 1,
+        'UnitFive_MyAPI' => 1,
+        'UnitFive_Product' => 1
     ]
 ];
