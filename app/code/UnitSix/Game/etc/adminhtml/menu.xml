@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Admin:etc/admin_menu.xsd">
+    <menu>
+       <add 
+        id="UnitSix_Game" 
+        title="Computer Game" 
+        module="UnitSix_Game" 
+        sortOrder="100" 
+        resource="UnitSix_Game::menu" 
+        action="customadmin/create/index"
+        />
+    </menu>
+</config>
