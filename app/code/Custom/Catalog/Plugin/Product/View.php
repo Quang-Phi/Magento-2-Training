@@ -8,8 +8,8 @@ class View
 {
     public function afterToHtml(ProductView $subject, $html)
     {
-        $customHtml = '<div class="custom-text">My custom text</div>';
-        $html .= $customHtml;
+        // $customHtml = '<div class="custom-text">My custom text</div>';
+        // $html .= $customHtml;
         return $html;
     }
 }
