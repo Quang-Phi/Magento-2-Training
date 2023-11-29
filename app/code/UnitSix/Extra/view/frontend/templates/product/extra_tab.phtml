@@ -1,0 +1,18 @@
+<?php
+$extraData = $block->getExtra();
+?>
+
+<?php if (!empty($extraData)): ?>
+    <div class="extra-tab">
+        <ul>
+            <?php foreach ($extraData as $extra): ?>
+                <li>
+                    <span>ID: <?= $block->escapeHtml($extra['link_id']) ?> - </span>
+                    <span><?= $block->escapeHtml($extra['name']) ?></span>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+<?php else: ?>
+    <p>No extra information available for this product.</p>
+<?php endif; ?>

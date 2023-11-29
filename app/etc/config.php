@@ -354,7 +354,6 @@ return [
         'Custom_GetRoutes' => 1,
         'Custom_LifeCircle' => 1,
         'Custom_Logger' => 1,
-        'Custom_MasterRouter' => 1,
         'Custom_Price' => 1,
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeGraphQl' => 1,
@@ -371,6 +370,12 @@ return [
         'UnitFive_DataAPI' => 1,
         'UnitFive_Entity' => 1,
         'UnitFive_MyAPI' => 1,
-        'UnitFive_Product' => 1
+        'UnitFive_Product' => 1,
+        'UnitSix_Extra' => 1,
+        'UnitSix_Game' => 1,
+        'UnitSix_Grid' => 1,
+        'UnitSix_MenuAdmin' => 1,
+        'UnitSix_Order' => 1,
+        'UnitSix_TableAttr' => 1
     ]
 ];
